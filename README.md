@@ -1,6 +1,7 @@
 # EmployeePortal
 Kotlin Multiplatform project for Rave Business Systems Employee portal
 
-TODO 
-  Add Android platform
-  Add iOS platform
+TODO<br/>
+* Add React components
+* Add Android platform
+* Add iOS platform
