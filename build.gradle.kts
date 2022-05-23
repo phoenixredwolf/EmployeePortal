@@ -9,6 +9,7 @@ val kotlinx_html: String by project
 val mysql: String by project
 val react: String by project
 val serialization: String by project
+val coroutines: String by project
 
 plugins {
     kotlin("multiplatform") version "1.6.21"
@@ -45,6 +46,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization")
                 implementation("io.ktor:ktor-client-core:$ktor")
             }
@@ -70,6 +72,9 @@ kotlin {
                 implementation("io.ktor:ktor-client-serialization:$ktor")
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react:$react")
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:$react")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-react-css:$react")
+                implementation(npm("react", "17.0.2"))
+                implementation(npm("react-dom", "17.0.2"))
             }
         }
         val jsTest by getting

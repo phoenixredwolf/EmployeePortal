@@ -1,12 +1,13 @@
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonNames
 
 @Serializable
 data class Consultants(
-    val id: Int,
+    @JsonNames("id_consultant") val idConsultant: Int,
     val name: String,
     val current_project: Projects?,
     val previous_projects: List<Projects>?,
-    val rave_start: String?,
+    @JsonNames("rave_start") val raveStart: String?,
     val project_start: String?,
     val sme: SME?
 )

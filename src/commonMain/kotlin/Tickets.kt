@@ -7,6 +7,7 @@ data class Tickets(
     @JsonNames("ticket_number") val ticketNumber: String,
     @JsonNames("ticket_name") val ticketName: String,
     @JsonNames("ticket_desc") val ticketDesc: String?,
+    @JsonNames("ticket_assigned") val ticketAssn: String?,
     @JsonNames("ticket_start") val ticketStart: String?,
     @JsonNames("ticket_due") val ticketDueDate: String?,
     @JsonNames("ticket_status") val ticketStatus: TicketStatus?
